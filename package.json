@@ -1,0 +1,42 @@
+{
+  "name": "etc-explorer",
+  "version": "0.2.0",
+  "description": "A lightweight ethereum classic block explorer",
+  "repository": "https://github.com/ethereumclassic/explorer",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"node tools/stats.js \" \"node tools/richlist.js \" \"node tools/sync.js \" \"node app.js\" ",
+    "app": "node app.js",
+    "sync": "node tools/sync.js",
+    "stats": "node tools/stats.js",
+    "rich": "node tools/richlist.js",
+    "test": "mocha --exit",
+    "lint:check": "concurrently \"eslint *.js ./lib/*.js ./test/*.js ./test/units/*.js ./routes/*.js ./tools/*.js \" \"html-linter --config html-linter.json\" ",
+    "lint:fix": "eslint *.js ./lib/*.js ./test/*.js ./test/units/*.js ./routes/*.js ./tools/*.js --fix"
+  },
+  "dependencies": {
+    "bignumber.js": "^8.1.1",
+    "body-parser": "^1.18.3",
+    "concurrently": "4.1.0",
+    "ejs": "2.6.1",
+    "express": "^4.16.4",
+    "human-standard-token-abi": "^2.0.0",
+    "mongoose": "^4.13.18",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.3.0",
+    "rlp": "^2.2.3",
+    "serve-favicon": "~2.5.0",
+    "solc": "^0.5.6",
+    "web3": "1.0.0-beta.37",
+    "web3-explorer": "1.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "html-linter": "^1.1.1",
+    "mocha": "^6.0.2",
+    "request": "^2.88.0"
+  }
+}

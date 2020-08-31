@@ -1,0 +1,20 @@
+{
+  "nodeAddr": "192.168.5.251",
+  "wsPort": 8545,
+  "startBlock": 0,
+  "endBlock": "latest",
+  "quiet": true,
+  "syncAll": true,
+  "patch": true,
+  "patchBlocks": 100,
+  "bulkSize": 100,
+  "settings": {
+    "poweredbyCustom": false,
+    "poweredbyEtc": true,
+    "tokenList": "tokens.json",
+    "useRichList": true,
+    "useFiat": true,
+    "miners": {
+    }
+  }
+}
